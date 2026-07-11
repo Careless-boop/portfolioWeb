@@ -51,7 +51,7 @@ const submit = form.querySelector('button[type="submit"]');
 
 const showError = (html) => {
   error.innerHTML = html
-    || `Something went wrong sending that. Please email me directly at <a href="mailto:${CONTACT_ADDRESS}">${CONTACT_ADDRESS}</a>.`;
+    || `<span class="error-lead">Something went wrong sending that.</span> Please email me directly at <a href="mailto:${CONTACT_ADDRESS}">${CONTACT_ADDRESS}</a>.`;
   error.hidden = false;
 };
 

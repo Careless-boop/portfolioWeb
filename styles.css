@@ -14,6 +14,7 @@
   --border: rgba(20, 20, 15, 0.12);
   --panel: rgba(20, 20, 15, 0.025);
   --nav-bg: rgba(250, 249, 245, 0.82);
+  --danger: #c0392b;
 
   --maxw: 1200px;
   --gutter: 56px;
@@ -36,6 +37,7 @@
   --border: rgba(255, 255, 255, 0.12);
   --panel: rgba(255, 255, 255, 0.03);
   --nav-bg: rgba(21, 22, 15, 0.82);
+  --danger: #ff8a80;
 }
 
 /* No JavaScript: no data-theme attribute is ever set, so honour the OS. */
@@ -51,6 +53,7 @@
     --border: rgba(255, 255, 255, 0.12);
     --panel: rgba(255, 255, 255, 0.03);
     --nav-bg: rgba(21, 22, 15, 0.82);
+    --danger: #ff8a80;
   }
 }
 
@@ -563,9 +566,11 @@ strong { font-weight: 600; }
 }
 
 .contact-form__error a { color: inherit; }
+.contact-form__error .error-lead { color: var(--danger); font-weight: 600; }
 
 .contact-success {
   padding: 24px;
+  margin: 4px;
   border-radius: 12px;
   background: var(--chip);
   font: 500 14px var(--sans);
