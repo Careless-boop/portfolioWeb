@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Viktor Halushka — Fullstack .NET Developer</title>
+<meta name="description" content="Fullstack .NET developer in Rzeszów, Poland. Serverless Azure backends, ASP.NET Core APIs, and web interfaces in Angular and Blazor.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Viktor Halushka — Fullstack .NET Developer">
+<meta property="og:description" content="Serverless Azure backends, ASP.NET Core APIs, and web interfaces in Angular and Blazor.">
+
+<script>
+  // Resolve the theme before first paint so the page never flashes the wrong one.
+  // A saved choice wins; otherwise fall back to the client's OS preference.
+  // (With JS off, the attribute is never set and CSS follows the OS via
+  //  prefers-color-scheme — see styles.css.)
+  try {
+    var stored = localStorage.getItem('theme');
+    var dark = stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  } catch (e) {}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner container">
+    <a class="brand" href="#top">
+      <span class="brand__name">Viktor Halushka</span>
+      <span class="brand__role">Fullstack .NET Developer</span>
+    </a>
+    <div class="site-header__right">
+      <nav class="main-nav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn nav-cta" href="assets/CV_Halushka(webpage).pdf" download>Download CV</a>
+      <button id="theme-toggle" class="theme-toggle no-print" type="button" title="Toggle theme" aria-label="Toggle colour theme" aria-pressed="false">
+        <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="M4.93 4.93l1.41 1.41"></path>
+          <path d="M17.66 17.66l1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="M6.34 17.66l-1.41 1.41"></path>
+          <path d="M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section id="about" class="hero">
+    <div class="hero__grid container">
+      <div class="hero__lead">
+        <p class="status-pill"><span class="status-pill__dot" aria-hidden="true"></span>Open for contact</p>
+        <h1 class="hero__name">Viktor<br>Halushka</h1>
+        <p class="hero__role">Fullstack .NET Developer</p>
+        <p class="hero__intro">
+          I build in <strong>C#</strong> across the whole stack: serverless <strong>Azure</strong>
+          backends (Functions, Cosmos DB, Service Bus), REST APIs on <strong>ASP.NET Core</strong>
+          with EF Core and SQL Server, and web interfaces in <strong>Angular</strong> and
+          <strong>Blazor</strong>.
+        </p>
+        <p class="hero__note">
+          Comfortable with event-driven, asynchronous pipelines and high-load, multi-threaded
+          services, plus authentication and permission models built on JWT and MSAL. Looking to keep
+          growing as a backend-leaning fullstack engineer on ambitious, well-built products.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="mailto:contact@viktorhalushka.dev">Email me</a>
+          <div class="hero__socials">
+            <!-- TODO: replace with real profile URLs -->
+            <a class="link-underline" href="#">Github</a>
+            <a class="link-underline" href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile-card" aria-label="Profile">
+        <p class="profile-card__label">Profile</p>
+        <dl class="profile-list">
+          <div class="profile-row">
+            <dt>Based in</dt>
+            <dd>Rzeszów, Poland</dd>
+          </div>
+          <div class="profile-row">
+            <dt>Experience</dt>
+            <dd>3+ years</dd>
+          </div>
+          <div class="profile-row">
+            <dt>Focus</dt>
+            <dd>Backend-leaning fullstack</dd>
+          </div>
+          <div class="profile-row">
+            <dt>Languages</dt>
+            <dd>EN advanced · PL communicative · UA native</dd>
+          </div>
+          <div class="profile-row">
+            <dt>Education</dt>
+            <dd>B.Sc. Automation &amp; CIT, Kyiv Polytechnic</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="eyebrow">Experience</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+
+      <article class="exp__row">
+        <div class="exp__meta">
+          <p class="exp__date">Aug 2024 – Present</p>
+          <p class="exp__company">Intellidev sp. z o.o.</p>
+          <p class="exp__project">FollowApp.Care<span>, clinic engagement platform</span></p>
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__role">Fullstack .NET / Azure Developer</h3>
+          <ul class="exp__points">
+            <li>Built the admin platform on an <strong>Angular</strong> monorepo and the patient survey UI with lead capture</li>
+            <li>Implemented <strong>JWT</strong>-based permission scoping with <strong>MSAL</strong> authentication</li>
+            <li>Built backend microservices as <strong>Azure Functions</strong>, including an async PDF-generation service on <strong>Service Bus</strong></li>
+            <li>Set up <strong>CI/CD</strong> pipelines to deploy Azure Functions and container apps</li>
+          </ul>
+          <p class="exp__stack">.NET · Angular · Azure Functions · Service Bus · Cosmos DB · MSAL · Docker</p>
+        </div>
+      </article>
+
+      <article class="exp__row">
+        <div class="exp__meta">
+          <p class="exp__date">Feb 2023 – Jul 2024</p>
+          <p class="exp__company">Individual Entrepreneur</p>
+          <p class="exp__project">Browser Automation<span>, web application</span></p>
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__role">Fullstack .NET / Blazor Developer</h3>
+          <ul class="exp__points">
+            <li>Handled multi-threading and task coordination; optimized resource usage and performance</li>
+            <li>Developed <strong>Blazor</strong> UI components for the automation workflow</li>
+            <li>Collaborated using GitHub and Kanban</li>
+          </ul>
+          <p class="exp__stack">.NET 8 · SQL Server · EF Core · MassTransit · Docker · Blazor · Selenium · Postman</p>
+        </div>
+      </article>
+
+      <article class="exp__row">
+        <div class="exp__meta">
+          <p class="exp__date">Jun 2022 – Aug 2022 <span class="badge">Internship</span></p>
+          <p class="exp__company">Softserve Inc.</p>
+          <p class="exp__project">Historical Encyclopedia<span>, API-based app</span></p>
+        </div>
+        <div class="exp__body">
+          <h3 class="exp__role">Backend .NET Developer</h3>
+          <ul class="exp__points">
+            <li>Developed secure <strong>ASP.NET Core</strong> APIs with <strong>JWT</strong> auth over <strong>EF Core</strong> data</li>
+            <li>Ensured code quality with testing and analysis tools; fixed bugs and shipped new features</li>
+            <li>Collaborated using Scrum and GitHub</li>
+          </ul>
+          <p class="exp__stack">.NET Core · ASP.NET Core · EF Core · JWT · MS SQL Server · NUnit · Moq · FluentAssertions</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="eyebrow">Technologies I work with</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <p class="skill-card__label">Languages &amp; Core</p>
+          <ul class="skill-chips">
+            <li>C#</li>
+            <li>.NET / .NET Framework</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>LINQ</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Backend &amp; APIs</p>
+          <ul class="skill-chips">
+            <li>ASP.NET Core</li>
+            <li>Razor Pages</li>
+            <li>MVC</li>
+            <li>REST API</li>
+            <li>SignalR</li>
+            <li>MassTransit</li>
+            <li>RabbitMQ</li>
+            <li>JWT / MSAL</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Frontend</p>
+          <ul class="skill-chips">
+            <li>Angular</li>
+            <li>Blazor</li>
+            <li>React</li>
+            <li>HTML / CSS</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Cloud &amp; DevOps</p>
+          <ul class="skill-chips">
+            <li>Azure Functions</li>
+            <li>Service Bus</li>
+            <li>Container Apps</li>
+            <li>Azure Web App</li>
+            <li>Key Vault</li>
+            <li>Blob Storage</li>
+            <li>Azure DevOps</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Data</p>
+          <ul class="skill-chips">
+            <li>MS SQL Server</li>
+            <li>Azure Cosmos DB</li>
+            <li>Entity Framework Core</li>
+            <li>ADO.NET</li>
+            <li>Redis</li>
+            <li>SSMS</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Desktop</p>
+          <ul class="skill-chips">
+            <li>WPF</li>
+            <li>Windows Forms</li>
+            <li>MVVM</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Testing</p>
+          <ul class="skill-chips">
+            <li>xUnit</li>
+            <li>NUnit</li>
+            <li>MSTest</li>
+            <li>Moq</li>
+            <li>FluentAssertions</li>
+            <li>Selenium</li>
+            <li>Postman</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-card__label">Architecture &amp; Practices</p>
+          <ul class="skill-chips">
+            <li>Event-Driven</li>
+            <li>Microservices</li>
+            <li>CI / CD</li>
+            <li>Git / GitHub</li>
+            <li>Scrum / Kanban</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="eyebrow">Selected work (SOON)</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <h3 class="work-card__title">Project one</h3>
+          <p class="work-card__status">coming soon</p>
+        </article>
+        <article class="work-card">
+          <h3 class="work-card__title">Project two</h3>
+          <p class="work-card__status">coming soon</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact__grid container">
+      <div class="contact__intro">
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="contact__title">Let's build something</h2>
+        <p class="contact__text">Always happy to talk about code, ideas, or whatever you're curious about. Drop a line and I'll get back to you.</p>
+        <div class="contact__details">
+          <a href="mailto:contact@viktorhalushka.dev">contact@viktorhalushka.dev</a>
+          <span>Rzeszów, Poland</span>
+        </div>
+      </div>
+      <div class="contact__form-wrap">
+        <form id="contact-form" class="contact-form" novalidate>
+          <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+          <textarea name="message" placeholder="Message" rows="4" required></textarea>
+          <!-- Honeypot: hidden from people, tripped by bots (Web3Forms drops these). -->
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <!-- Cloudflare Turnstile renders here when a site key is set in main.js. -->
+          <div id="turnstile"></div>
+          <button class="btn" type="submit">Send message</button>
+          <p id="contact-error" class="contact-form__error" role="alert" hidden></p>
+        </form>
+        <p id="contact-success" class="contact-success" role="status" hidden>Thanks! I'll get back to you soon.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <span>Viktor Halushka · Fullstack .NET Developer</span>
+    <span>Rzeszów, Poland · contact@viktorhalushka.dev</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
